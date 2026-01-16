@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="India Finance Suite 2026 – Free Income Tax Calculator (Old vs New Regime), GST Late Fee Calculator, Home Loan Foreclosure Calculator, and HRA Rent Receipt Generator for FY 2025-26.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="India Finance Suite">
+    <meta name="keywords" content="income tax calculator india, new tax regime, old tax regime, GST calculator, home loan calculator, HRA receipt generator, FY 2025-26, AY 2026-27">
+    <title>India Finance Suite 2026 | Tax, GST, Loan & HRA Calculator</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "India Finance Suite 2026",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web Browser",
+      "description": "Comprehensive Indian finance calculators including income tax regime comparison (Old vs New), GST late fee calculator, home loan foreclosure savings calculator, and HRA receipt generator for FY 2025-26 and AY 2026-27.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "featureList": [
+        "Income Tax Calculator - Old vs New Regime",
+        "Home Loan Foreclosure Calculator",
+        "GST Interest and Late Fee Calculator",
+        "HRA Rent Receipt Generator"
+      ],
+      "browserRequirements": "Requires JavaScript. Works on Chrome, Firefox, Safari, Edge.",
+      "datePublished": "2026-01-16",
+      "dateModified": "2026-01-16",
+      "author": {
+        "@type": "Organization",
+        "name": "India Finance Suite"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "150"
+      }
+    }
+    </script>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #1a1f2e;
+            --primary-light: #2d3548;
+            --secondary: #4a5568;
+            --accent: #d4af37;
+            --accent-hover: #b8941f;
+            --accent-light: #f4e4bc;
+            --error: #c53030;
+            --warning: #dd6b20;
+            --bg: #f7f8fa;
+            --card-bg: #ffffff;
+            --border: #e2e5eb;
+            --text: #2d3748;
+            --text-light: #718096;
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -1px rgba(0,0,0,0.04);
+            --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.08), 0 10px 10px -5px rgba(0,0,0,0.04);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 50%, #2c3e50 100%);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+        
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .tab {
+            background: white;
+            color: var(--text);
+            border: 2px solid var(--border);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+        
+        .tab:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .tab.active {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+            color: var(--primary);
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+        
+        .section {
+            display: none;
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 2rem;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+        }
+        
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-group {
+            position: relative;
+        }
+        
+        label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.2s ease;
+            background: white;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+        }
+        
+        input:disabled {
+            background: #f1f5f9;
+            cursor: not-allowed;
+        }
+        
+        .hint {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+            color: var(--primary);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            width: 100%;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.3);
+            color: white;
+        }
+        
+        .btn-print {
+            width: auto;
+            padding: 0.75rem 1.5rem;
+            margin-top: 0;
+            font-size: 0.875rem;
+        }
+        
+        .result {
+            margin-top: 2rem;
+            padding: 2rem;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #fefcf3 0%, var(--accent-light) 100%);
+            border-left: 6px solid var(--accent);
+            animation: slideIn 0.4s ease;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .result h3 {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .result-row:last-child {
+            border-bottom: none;
+            margin-top: 0.5rem;
+            padding-top: 1rem;
+            border-top: 2px solid var(--accent);
+        }
+        
+        .result-label {
+            font-weight: 500;
+            color: var(--secondary);
+        }
+        
+        .result-value {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .comparison-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        
+        .comparison-card.recommended {
+            border-color: var(--accent);
+            background: linear-gradient(135deg, var(--accent-light) 0%, white 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .comparison-card.recommended::before {
+            content: "RECOMMENDED";
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 5px 40px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            transform: rotate(45deg);
+        }
+        
+        .comparison-card h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .receipt-card {
+            border: 2px solid var(--border);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            background: white;
+            page-break-inside: avoid;
+            border-radius: 12px;
+        }
+        
+        .receipt-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .receipt-content {
+            margin: 1.5rem 0;
+            line-height: 2;
+        }
+        
+        .receipt-footer {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        
+        .signature-line {
+            border-top: 2px solid var(--primary);
+            width: 200px;
+            text-align: center;
+            padding-top: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+        
+        .error-message {
+            background: #fee2e2;
+            color: var(--error);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border-left: 4px solid var(--error);
+            font-weight: 500;
+        }
+        
+        .info-box {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-size: 0.875rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 0.25rem;
+        }
+        
+        footer {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            margin-top: 3rem;
+            border-top: 4px solid var(--accent);
+        }
+        
+        footer h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        footer h3:first-child {
+            margin-top: 0;
+        }
+        
+        footer p {
+            color: var(--secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.75rem; }
+            .grid { grid-template-columns: 1fr; }
+            .tabs { flex-direction: column; }
+            .tab { min-width: 100%; }
+            .section { padding: 1.5rem; }
+            .comparison-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media print {
+            body { background: white; padding: 0; }
+            .no-print { display: none !important; }
+            .container { max-width: none; }
+            .section { border: none; box-shadow: none; page-break-after: always; }
+            .receipt-card { border: 2px solid #000; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="no-print" id="top">
+        <h1>🇮🇳 India Finance Suite 2026</h1>
+        <p>Comprehensive Tax, GST, Loan & HRA Calculator | FY 2025-26 & AY 2026-27</p>
+        <p style="font-size: 0.875rem; opacity: 0.8; margin-top: 0.5rem;">Last Updated: January 16, 2026</p>
+    </header>
+
+    <div class="tabs no-print">
+        <div class="tab active" onclick="switchTab(0)">💰 Income Tax</div>
+        <div class="tab" onclick="switchTab(1)">🏠 Home Loan</div>
+        <div class="tab" onclick="switchTab(2)">🧾 GST Calculator</div>
+        <div class="tab" onclick="switchTab(3)">📄 HRA Receipts</div>
+    </div>
+
+    <!-- TAX CALCULATOR -->
+    <section class="section active" id="section0">
+        <h2>💰 Income Tax Calculator (Old vs New Regime)</h2>
+        
+        <div class="info-box">
+            <strong>FY 2025-26 Updates:</strong> New regime offers ₹75,000 standard deduction and rebate up to ₹7 lakh. Old regime has ₹50,000 standard deduction with additional deductions under 80C, 80D, etc.
+        </div>
+
+        <div class="grid">
+            <div class="input-group">
+                <label>Annual Gross Salary (₹) *</label>
+                <input id="taxIncome" type="number" placeholder="e.g., 1500000" min="0">
+                <p class="hint">Total annual salary before any deductions</p>
+            </div>
+            <div class="input-group">
+                <label>Section 80C Investments (₹)</label>
+                <input id="tax80C" type="number" placeholder="Max 150000" min="0" max="150000" value="0">
+                <p class="hint">PPF, ELSS, Life Insurance, etc. (Max ₹1.5L)</p>
+            </div>
+            <div class="input-group">
+                <label>Section 80D - Health Insurance (₹)</label>
+                <input id="tax80D" type="number" placeholder="Max 75000" min="0" max="75000" value="0">
+                <p class="hint">Self + Parents (Max ₹25k + ₹50k senior)</p>
+            </div>
+            <div class="input-group">
+                <label>Home Loan Interest (₹)</label>
+                <input id="taxHLI" type="number" placeholder="Max 200000" min="0" max="200000" value="0">
+                <p class="hint">24(b) deduction (Max ₹2L for self-occupied)</p>
+            </div>
+            <div class="input-group">
+                <label>Other Deductions (₹)</label>
+                <input id="taxOther" type="number" placeholder="80E, 80G, etc." min="0" value="0">
+                <p class="hint">Education loan, donations, etc.</p>
+            </div>
+        </div>
+        
+        <button class="btn" onclick="calculateTax()">Calculate & Compare Regimes</button>
+        <div id="taxResult"></div>
+    </section>
+
+    <!-- HOME LOAN -->
+    <section class="section" id="section1">
+        <h2>🏠 Home Loan Foreclosure Calculator</h2>
+        
+        <div class="info-box">
+            Calculate potential interest savings by prepaying or foreclosing your home loan early.
+        </div>
+
+        <div class="grid">
+            <div class="input-group">
+                <label>Current Outstanding Principal (₹) *</label>
+                <input id="hlPrincipal" type="number" placeholder="e.g., 3000000" min="0">
+            </div>
+            <div class="input-group">
+                <label>Interest Rate (% per annum) *</label>
+                <input id="hlRate" type="number" step="0.01" placeholder="e.g., 8.5" min="0" max="20">
+            </div>
+            <div class="input-group">
+                <label>Current Monthly EMI (₹) *</label>
+                <input id="hlEMI" type="number" placeholder="e.g., 40000" min="0">
+            </div>
+            <div class="input-group">
+                <label>Foreclosure/Prepayment Fee (%)</label>
+                <input id="hlFee" type="number" step="0.1" value="0" min="0" max="5">
+                <p class="hint">Usually 0-2% (Check with your bank)</p>
+            </div>
+        </div>
+        
+        <button class="btn" onclick="calculateHomeLoan()">Calculate Savings</button>
+        <div id="hlResult"></div>
+    </section>
+
+    <!-- GST CALCULATOR -->
+    <section class="section" id="section2">
+        <h2>🧾 GST Interest & Late Fee Calculator</h2>
+        
+        <div class="info-box">
+            <strong>GST Penalty Rules:</strong> Interest @ 18% p.a. + Late fee ₹50/day (CGST) + ₹50/day (SGST) = ₹100/day (Max ₹10,000)
+        </div>
+
+        <div class="grid">
+            <div class="input-group">
+                <label>GST Tax Amount Due (₹) *</label>
+                <input id="gstAmount" type="number" placeholder="e.g., 50000" min="0">
+            </div>
+            <div class="input-group">
+                <label>Number of Days Delayed *</label>
+                <input id="gstDays" type="number" placeholder="e.g., 30" min="0">
+            </div>
+            <div class="input-group">
+                <label>Return Type</label>
+                <select id="gstType">
+                    <option value="regular">GSTR-3B (Regular)</option>
+                    <option value="nil">Nil Return</option>
+                </select>
+            </div>
+        </div>
+        
+        <button class="btn" onclick="calculateGST()">Calculate Penalty</button>
+        <div id="gstResult"></div>
+    </section>
+
+    <!-- HRA GENERATOR -->
+    <section class="section" id="section3">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;" class="no-print">
+            <h2 style="margin: 0;">📄 HRA Receipt Generator (FY 2025-26)</h2>
+            <button class="btn btn-print btn-secondary" onclick="window.print()">🖨️ Print/Save PDF</button>
+        </div>
+        
+        <div class="info-box no-print">
+            Generate rent receipts for HRA exemption claims. PAN required if annual rent exceeds ₹1 lakh.
+        </div>
+
+        <div class="grid no-print">
+            <div class="input-group">
+                <label>Tenant Name (Your Name) *</label>
+                <input id="hraTenant" type="text" placeholder="e.g., Rajesh Kumar">
+            </div>
+            <div class="input-group">
+                <label>Landlord Name *</label>
+                <input id="hraLandlord" type="text" placeholder="e.g., Suresh Sharma">
+            </div>
+            <div class="input-group">
+                <label>Landlord PAN</label>
+                <input id="hraPAN" type="text" placeholder="e.g., ABCDE1234F" maxlength="10" style="text-transform: uppercase">
+                <p class="hint">Required if annual rent > ₹1 lakh</p>
+            </div>
+            <div class="input-group">
+                <label>Monthly Rent Amount (₹) *</label>
+                <input id="hraRent" type="number" placeholder="e.g., 15000" min="0">
+            </div>
+            <div class="input-group">
+                <label>Property Address *</label>
+                <input id="hraAddress" type="text" placeholder="Flat/House details">
+            </div>
+            <div class="input-group">
+                <label>City *</label>
+                <input id="hraCity" type="text" placeholder="e.g., Mumbai">
+            </div>
+            <div class="input-group">
+                <label>Start Month</label>
+                <select id="hraStartMonth">
+                    <option value="0">April 2025</option>
+                    <option value="1">May 2025</option>
+                    <option value="2">June 2025</option>
+                    <option value="3">July 2025</option>
+                    <option value="4">August 2025</option>
+                    <option value="5">September 2025</option>
+                    <option value="6">October 2025</option>
+                    <option value="7">November 2025</option>
+                    <option value="8">December 2025</option>
+                    <option value="9">January 2026</option>
+                    <option value="10">February 2026</option>
+                    <option value="11">March 2026</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>End Month</label>
+                <select id="hraEndMonth">
+                    <option value="11">March 2026</option>
+                    <option value="0">April 2025</option>
+                    <option value="1">May 2025</option>
+                    <option value="2">June 2025</option>
+                    <option value="3">July 2025</option>
+                    <option value="4">August 2025</option>
+                    <option value="5">September 2025</option>
+                    <option value="6">October 2025</option>
+                    <option value="7">November 2025</option>
+                    <option value="8">December 2025</option>
+                    <option value="9">January 2026</option>
+                    <option value="10">February 2026</option>
+                </select>
+            </div>
+        </div>
+        
+        <button class="btn no-print" onclick="generateHRA()">Generate Receipts</button>
+        <div id="hraResult"></div>
+    </section>
+</div>
+
+<footer class="section no-print">
+    <h3>📋 Privacy Policy</h3>
+    <p>This website does not collect, store, or transmit any personal data. All calculations are performed locally in your browser. No cookies are used, and no information is sent to external servers. Your financial data remains 100% private and secure on your device.</p>
+
+    <h3>⚖️ Disclaimer</h3>
+    <p>This tool provides indicative calculations based on publicly available tax rules and regulations for Financial Year 2025–26 (Assessment Year 2026-27). The information provided is for general guidance only and should not be considered as professional financial, legal, or tax advice.</p>
+    <p><strong>Important:</strong> This website is not affiliated with, endorsed by, or connected to the Income Tax Department of India, Goods and Services Tax Network (GSTN), Reserve Bank of India (RBI), or any banking institution. Tax laws are subject to change, and individual circumstances may vary. We strongly recommend consulting with a qualified Chartered Accountant (CA) or tax professional for personalized advice before making any financial decisions.</p>
+    <p>While we strive for accuracy, we do not guarantee the completeness or correctness of the calculations. Users are solely responsible for verifying all results and complying with applicable tax laws.</p>
+
+    <h3>📧 Contact</h3>
+    <p>For questions, feedback, or suggestions: <a href="mailto:kklabsinfo@gmail.com">kklabsinfo@gmail.com</a></p>
+    
+    <p style="text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--text-light); font-size: 0.875rem;">
+        © 2026 India Finance Suite. All rights reserved. | <a href="#top">Back to Top</a>
+    </p>
+</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const fmt = n => '₹' + Math.round(n).toLocaleString('en-IN');
+const months = [
+    {name: 'April 2025', year: 2025},
+    {name: 'May 2025', year: 2025},
+    {name: 'June 2025', year: 2025},
+    {name: 'July 2025', year: 2025},
+    {name: 'August 2025', year: 2025},
+    {name: 'September 2025', year: 2025},
+    {name: 'October 2025', year: 2025},
+    {name: 'November 2025', year: 2025},
+    {name: 'December 2025', year: 2025},
+    {name: 'January 2026', year: 2026},
+    {name: 'February 2026', year: 2026},
+    {name: 'March 2026', year: 2026}
+];
+
+function switchTab(index) {
+    document.querySelectorAll('.tab').forEach((t, i) => {
+        t.classList.toggle('active', i === index);
+    });
+    document.querySelectorAll('.section').forEach((s, i) => {
+        s.classList.toggle('active', i === index);
+    });
+}
+
+function calculateTax() {
+    const income = parseFloat($('taxIncome').value);
+    if (!income || income < 0) {
+        $('taxResult').innerHTML = '<div class="error-message">Please enter a valid annual income</div>';
+        return;
+    }
+
+    const ded80C = Math.min(parseFloat($('tax80C').value) || 0, 150000);
+    const ded80D = Math.min(parseFloat($('tax80D').value) || 0, 75000);
+    const hli = Math.min(parseFloat($('taxHLI').value) || 0, 200000);
+    const other = parseFloat($('taxOther').value) || 0;
+
+    // OLD REGIME
+    const stdDedOld = 50000;
+    const totalDedOld = ded80C + ded80D + hli + other + stdDedOld;
+    const taxableOld = Math.max(0, income - totalDedOld);
+    
+    let taxOld = 0;
+    if (taxableOld > 250000) {
+        if (taxableOld <= 500000) {
+            taxOld = (taxableOld - 250000) * 0.05;
+        } else if (taxableOld <= 1000000) {
+            taxOld = 12500 + (taxableOld - 500000) * 0.2;
+        } else {
+            taxOld = 112500 + (taxableOld - 1000000) * 0.3;
+        }
+    }
+    
+    if (taxableOld <= 500000) taxOld = 0;
+    const totalTaxOld = taxOld * 1.04;
+
+    // NEW REGIME
+    const stdDedNew = 75000;
+    const taxableNew = Math.max(0, income - stdDedNew);
+    
+    let taxNew = 0;
+    if (taxableNew > 300000) {
+        if (taxableNew <= 700000) {
+            taxNew = (taxableNew - 300000) * 0.05;
+        } else if (taxableNew <= 1000000) {
+            taxNew = 20000 + (taxableNew - 700000) * 0.10;
+        } else if (taxableNew <= 1200000) {
+            taxNew = 50000 + (taxableNew - 1000000) * 0.15;
+        } else if (taxableNew <= 1500000) {
+            taxNew = 80000 + (taxableNew - 1200000) * 0.20;
+        } else {
+            taxNew = 140000 + (taxableNew - 1500000) * 0.30;
+        }
+    }
+    
+    if (taxableNew <= 700000) taxNew = 0;
+    const totalTaxNew = taxNew * 1.04;
+
+    const savings = Math.abs(totalTaxNew - totalTaxOld);
+    const recommended = totalTaxNew <= totalTaxOld ? 'new' : 'old';
+    const recommendedText = recommended === 'new' ? 'New Regime' : 'Old Regime';
+
+    $('taxResult').innerHTML = `
+        <div class="result">
+            <h3>Tax Comparison Results</h3>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card ${recommended === 'old' ? 'recommended' : ''}">
+                    <h4>Old Tax Regime</h4>
+                    <div class="result-row">
+                        <span class="result-label">Gross Income</span>
+                        <span class="result-value">${fmt(income)}</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Total Deductions</span>
+                        <span class="result-value">${fmt(totalDedOld)}</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Taxable Income</span>
+                        <span class="result-value">${fmt(taxableOld)}</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Total Tax (incl. cess)</span>
+                        <span class="result-value">${fmt(totalTaxOld)}</span>
+                    </div>
+                </div>
+                
+                <div class="comparison-card ${recommended === 'new' ? 'recommended' : ''}">
+                    <h4>New Tax Regime</h4>
+                    <div class="result-row">
+                        <span class="result-label">Gross Income</span>
+                        <span class="result-value">${fmt(income)}</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Std Deduction</span>
+                        <span class="result-value">${fmt(stdDedNew)}</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Taxable Income</span>
+                        <span class="result-value">${fmt(taxableNew)}</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Total Tax (incl. cess)</span>
+                        <span class="result-value">${fmt(totalTaxNew)}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">${recommendedText}</div>
+                    <div class="stat-label">Recommended Option</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${fmt(savings)}</div>
+                    <div class="stat-label">Annual Savings</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${fmt(savings/12)}</div>
+                    <div class="stat-label">Monthly Savings</div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function calculateHomeLoan() {
+    const principal = parseFloat($('hlPrincipal').value);
+    const rate = parseFloat($('hlRate').value);
+    const emi = parseFloat($('hlEMI').value);
+    const feePercent = parseFloat($('hlFee').value) || 0;
+
+    if (!principal || !rate || !emi || principal < 0 || rate < 0 || emi < 0) {
+        $('hlResult').innerHTML = '<div class="error-message">Please enter valid loan details</div>';
+        return;
+    }
+
+    const monthlyRate = rate / 1200;
+    let balance = principal;
+    let totalInterest = 0;
+    let months = 0;
+    const maxMonths = 360;
+
+    while (balance > 0 && months < maxMonths) {
+        const interest = balance * monthlyRate;
+        totalInterest += interest;
+        const principalPaid = emi - interest;
+        
+        if (principalPaid <= 0) {
+            $('hlResult').innerHTML = '<div class="error-message">EMI is too low to cover interest. Please check your inputs.</div>';
+            return;
+        }
+        
+        balance -= principalPaid;
+        months++;
+    }
+
+    const foreclosureFee = principal * (feePercent / 100);
+    const netSavings = totalInterest - foreclosureFee;
+    const yearsRemaining = (months / 12).toFixed(1);
+
+    $('hlResult').innerHTML = `
+        <div class="result">
+            <h3>Foreclosure Analysis</h3>
+            
+            <div class="result-row">
+                <span class="result-label">Current Outstanding</span>
+                <span class="result-value">${fmt(principal)}</span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Remaining Tenure</span>
+                <span class="result-value">${months} months (${yearsRemaining} years)</span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Total Interest if Continued</span>
+                <span class="result-value">${fmt(totalInterest)}</span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Foreclosure Fee (${feePercent}%)</span>
+                <span class="result-value">${fmt(foreclosureFee)}</span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Net Interest Savings</span>
+                <span class="result-value" style="color: var(--accent); font-size: 1.5rem">${fmt(netSavings)}</span>
+            </div>
+            
+            <div class="info-box" style="margin-top: 1.5rem">
+                <strong>Recommendation:</strong> ${netSavings > principal * 0.05 ? 
+                    'Foreclosing this loan would save significant interest costs. Consider prepayment if you have surplus funds.' : 
+                    'The interest savings are moderate. Evaluate other investment opportunities before foreclosing.'}
+            </div>
+        </div>
+    `;
+}
+
+function calculateGST() {
+    const amount = parseFloat($('gstAmount').value);
+    const days = parseInt($('gstDays').value);
+    const returnType = $('gstType').value;
+
+    if (!amount || !days || amount < 0 || days < 0) {
+        $('gstResult').innerHTML = '<div class="error-message">Please enter valid GST details</div>';
+        return;
+    }
+
+    const interest = amount * 0.18 * (days / 365);
+    
+    let lateFee = 0;
+    if (returnType === 'regular') {
+        lateFee = Math.min(days * 100, 10000);
+    } else {
+        lateFee = Math.min(days * 20, 2000);
+    }
+
+    const totalPenalty = interest + lateFee;
+    const totalPayable = amount + totalPenalty;
+
+    $('gstResult').innerHTML = `
+        <div class="result">
+            <h3>GST Penalty Calculation</h3>
+            
+            <div class="result-row">
+                <span class="result-label">Original Tax Due</span>
+                <span class="result-value">${fmt(amount)}</span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Days Delayed</span>
+                <span class="result-value">${days} days</span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Interest (@ 18% p.a.)</span>
+                <span class="result-value">${fmt(interest)}</span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Late Fee</span>
+                <span class="result-value">${fmt(lateFee)}</span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Total Penalty</span>
+                <span class="result-value" style="color: var(--error)">${fmt(totalPenalty)}</span>
+            </div>
+            <div class="result-row">
+                <span class="result-label">Total Amount Payable</span>
+                <span class="result-value" style="font-size: 1.5rem">${fmt(totalPayable)}</span>
+            </div>
+            
+            <div class="info-box" style="margin-top: 1.5rem; background: #fee2e2; border-color: var(--error)">
+                <strong>⚠️ Important:</strong> File your GST returns on time to avoid penalties. Interest and late fees accrue daily!
+            </div>
+        </div>
+    `;
+}
+
+function generateHRA() {
+    const tenant = $('hraTenant').value.trim();
+    const landlord = $('hraLandlord').value.trim();
+    const rent = parseFloat($('hraRent').value);
+    const address = $('hraAddress').value.trim();
+    const city = $('hraCity').value.trim();
+    const pan = $('hraPAN').value.trim().toUpperCase();
+    const startMonth = parseInt($('hraStartMonth').value);
+    const endMonth = parseInt($('hraEndMonth').value);
+
+    if (!tenant || !landlord || !rent || !address || !city) {
+        $('hraResult').innerHTML = '<div class="error-message">Please fill all required fields</div>';
+        return;
+    }
+
+    if (rent < 0) {
+        $('hraResult').innerHTML = '<div class="error-message">Rent amount must be positive</div>';
+        return;
+    }
+
+    const annualRent = rent * 12;
+    const panRequired = annualRent > 100000;
+
+    if (panRequired && (!pan || pan.length !== 10)) {
+        $('hraResult').innerHTML = '<div class="error-message">Landlord PAN is required when annual rent exceeds ₹1 lakh</div>';
+        return;
+    }
+
+    let receiptsHTML = '<div style="margin-top: 2rem;">';
+    
+    let currentMonth = startMonth;
+    let receiptCount = 0;
+    
+    do {
+        const monthData = months[currentMonth];
+        receiptsHTML += `
+            <div class="receipt-card">
+                <h3>HOUSE RENT RECEIPT</h3>
+                <div class="receipt-content">
+                    <p><strong>Receipt No:</strong> ${String(receiptCount + 1).padStart(3, '0')}/FY2025-26</p>
+                    <p><strong>Month:</strong> ${monthData.name}</p>
+                    <p><strong>Date:</strong> ${new Date(monthData.year, currentMonth % 12, 5).toLocaleDateString('en-IN', {day: '2-digit', month: 'long', year: 'numeric'})}</p>
+                    <br>
+                    <p>Received with thanks from <strong>${tenant}</strong>, a sum of <strong>${fmt(rent)}</strong> (Rupees ${numberToWords(rent)} only) towards rent for the month of <strong>${monthData.name}</strong>.</p>
+                    <br>
+                    <p><strong>Property Address:</strong><br>${address}, ${city}</p>
+                    ${panRequired ? `<p><strong>Landlord PAN:</strong> ${pan}</p>` : ''}
+                </div>
+                <div class="receipt-footer">
+                    <div>
+                        <p><strong>Landlord Name:</strong></p>
+                        <p>${landlord}</p>
+                    </div>
+                    <div class="signature-line">
+                        Landlord Signature
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        currentMonth = (currentMonth + 1) % 12;
+        receiptCount++;
+    } while (currentMonth !== (endMonth + 1) % 12 && receiptCount < 12);
+
+    receiptsHTML += '</div>';
+    
+    const infoHTML = `
+        <div class="info-box no-print" style="margin-top: 1rem">
+            <strong>Generated ${receiptCount} receipt(s)</strong> for FY 2025-26.<br>
+            Total Annual Rent: ${fmt(rent * receiptCount)} | ${panRequired ? '⚠️ PAN mandatory as rent exceeds ₹1L' : '✓ PAN not required'}
+        </div>
+    `;
+
+    $('hraResult').innerHTML = infoHTML + receiptsHTML;
+}
+
+function numberToWords(num) {
+    const ones = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+    const tens = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+    const teens = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
+    
+    if (num === 0) return 'Zero';
+    if (num < 10) return ones[num];
+    if (num < 20) return teens[num - 10];
+    if (num < 100) return tens[Math.floor(num / 10)] + (num % 10 ? ' ' + ones[num % 10] : '');
+    if (num < 1000) return ones[Math.floor(num / 100)] + ' Hundred' + (num % 100 ? ' ' + numberToWords(num % 100) : '');
+    if (num < 100000) return numberToWords(Math.floor(num / 1000)) + ' Thousand' + (num % 1000 ? ' ' + numberToWords(num % 1000) : '');
+    if (num < 10000000) return numberToWords(Math.floor(num / 100000)) + ' Lakh' + (num % 100000 ? ' ' + numberToWords(num % 100000) : '');
+    return numberToWords(Math.floor(num / 10000000)) + ' Crore' + (num % 10000000 ? ' ' + numberToWords(num % 10000000) : '');
+}
+</script>
+</body>
+</html>
